@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public GameObject prefab;
-    public GameObject bullet;
+    public Bullet bullet;
 
     void Start()
     {
@@ -27,13 +27,14 @@ public class BulletSpawner : MonoBehaviour
 
     void Spawn()
     {
-        GameObject spawnedBullet = Instantiate(prefab);
-        bullet = spawnedBullet.GetComponent<Bullet>();
+        //bullet=Instantiate(prefab);
+        GameObject spawnBullets = Instantiate(prefab);
+        bullet = spawnBullets.GetComponent<Bullet>();
     }
 
     void Fire()
     {
-        bullet.hasBeenFired = bullet;
+        bullet.hasBeenFired = true;
         bullet = null;
     }
 }
