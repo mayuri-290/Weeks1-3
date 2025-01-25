@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class minuteHand : MonoBehaviour
+public class challenge1 : MonoBehaviour
 {
+    public float Rot = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class minuteHand : MonoBehaviour
     void Update()
     {
         Vector3 rot = transform.eulerAngles;
-        rot.z += 6;
+        rot.z += Rot;
         transform.eulerAngles = rot;
     }
 }
