@@ -26,7 +26,6 @@ public class starMove : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;//current position of the object
-        pos.x += speed * Time.deltaTime;//increasing the x position based on speed
 
 
         if (back == false)//if the object is moving forward along the curve
@@ -49,7 +48,7 @@ public class starMove : MonoBehaviour
         transform.position = pos;//apply the horizontal movement to the object's position
 
         Vector2 scale = transform.localScale;//store the current scale.
-        transform.position = Vector2.Lerp(start, end, curve.Evaluate(t));//add start, end to the
+        transform.position = Vector2.Lerp(start, end, curve.Evaluate(t));//add start, end to the unity.
         transform.localScale = scale;//apply the updated data back
     }
 }
